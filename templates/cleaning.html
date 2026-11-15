@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Cleaning Report</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<style>
+      body {
+            background-image: url("{{ url_for('static', filename='plain.png') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+</style>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h2 class="text-center">🧼 Data Cleaning Summary</h2>
+
+        <div class="card mt-4 p-3 shadow">
+            <p><strong>Original shape:</strong> {{ original }}</p>
+            <p><strong>Cleaned shape:</strong> {{ cleaned }}</p>
+            <p>👉 Rows or columns with missing or duplicate data have been removed.</p>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="/dashboard" class="btn btn-primary">Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

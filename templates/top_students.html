@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top 10 Students</title>
+    <style>
+        body {
+      background-image: url("{{ url_for('static', filename='plain.png') }}");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column; /* Important for vertical layout */
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+        .container { margin: 30px auto; width: 90%; max-width: 1000px; background: white; padding: 25px; border-radius: 8px; }
+        h2 { color: #343a40; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 10px; border: 1px solid #ccc; }
+        .btn { margin-top: 20px; padding: 10px 20px; background: #0d6efd; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🏆 Top 10 Scoring Students</h2>
+        {{ top_table | safe }}
+        <a href="/dashboard" class="btn">Back to Dashboard</a>
+    </div>
+</body>
+</html>
+

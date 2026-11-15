@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <style>
+
+    
+    body {
+            background-image: url("{{ url_for('static', filename='back.png') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+    
+   
+    h1 {
+      color: #333;
+    }
+    .btn {
+      display: inline-block;
+      margin: 15px;
+      padding: 12px 25px;
+      background-color: #6c63ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background-color: #4b47c9;
+    }
+  </style>
+</head>
+<body>
+   <div class="background-container">
+    <div class="dashboard-header">
+      <h1>📊 Student Performance Dashboard</h1>
+    </div>
+  <div>
+    <a href="/cleaning" class="btn btn-outline-dark btn-block mb-2">🧼 Data Cleaning Report</a>
+
+    <a href="/outliers" class="btn btn-outline-danger btn-block mb-2">🚨 Outlier Detection</a>
+    <a href="/analysis" class="btn">Gender based Analysis</a>
+    <a href="/test_prep" class="btn">📚 Test Prep Impact</a>
+    <a href="/parental_impact" class="btn">🎓 Parental Education Impact</a>
+    <a href="/race_impact" class="btn">📊 Race/Ethnicity Impact</a>
+    <a href="/top_students" class="btn btn-outline-success">🏆 Top 10 Students</a>
+
+
+
+    
+    <a href="/" class="btn">Logout</a>
+  </div>
+</body>
+</html>
